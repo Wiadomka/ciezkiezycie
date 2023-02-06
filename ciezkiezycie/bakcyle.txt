@@ -1,0 +1,15 @@
+package com.company;
+
+public class Bakterie {
+    public static void main(String[] args) {
+        System.out.println("Zwiekszy sie 8x po:" + time(0,1,8));
+        System.out.println("Zwiekszy sie 10000x po:" + time(0,1,10000));
+        System.out.println("Zwiekszy sie 100000x po:" + time(0,1,100000));
+    }
+    public static int time(int n ,long population, long compareTo){
+        if(population >= compareTo)
+            return n;
+        else
+            return  time(n+2,population*2,compareTo);
+    }
+}
